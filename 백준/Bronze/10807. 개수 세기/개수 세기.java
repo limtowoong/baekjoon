@@ -1,24 +1,27 @@
-import java.lang.reflect.Array;
-import java.util.Scanner;
+
+import java.io.*;
+import java.util.StringTokenizer;
 
 class Main{
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        int N = sc.nextInt();
+    public static void main(String[] args) throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
+        int N = Integer.parseInt(br.readLine());
         int[] v = new int[N];
         int num = 0;
 
+        StringTokenizer st = new StringTokenizer(br.readLine());
+
         for (int i=0; i<N; i++) {
-            int a = sc.nextInt();
-            v[i] = a;
+            v[i] = Integer.parseInt(st.nextToken());
         }
-        int b = sc.nextInt();
+
+        int a = Integer.parseInt(br.readLine());
         for (int i=0; i<N; i++) {
-            if(v[i] == b){
+            if(v[i] == a){
                 num++;
             }
         }
-
         System.out.println(num);
     }
 }
