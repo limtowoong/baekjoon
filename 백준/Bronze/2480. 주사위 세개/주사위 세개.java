@@ -9,20 +9,18 @@ public static void main(String[] args) {
     int b = sc.nextInt();
     int c = sc.nextInt();
 
-
     if(a == b && b == c && b == c){
-        System.out.println(10000+a*1000);
+        System.out.print(10000+a*1000);
     } else if (a == b || a == c) {
-        System.out.println(1000+a*100);
+        System.out.print(1000+a*100);
     } else if (b == c) {
-        System.out.println(1000+b*100);
+        System.out.print(1000+b*100);
     } else if(a > b && a > c){
-        System.out.println(a*100);
+        System.out.print(a*100);
     } else if(b > a && b > c){
-        System.out.println(b*100);
-    } else if(c > a && c > b){
-        System.out.println(c*100);
+        System.out.print(b*100);
+    } else{
+        System.out.print(c*100);
     }
-
 }
 }
