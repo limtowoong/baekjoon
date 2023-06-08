@@ -5,22 +5,19 @@ public class Main {
 
         Scanner sc = new Scanner(System.in);
 
-        int A = sc.nextInt();
-        int B = sc.nextInt();
-        int C = sc.nextInt();
+        int h = sc.nextInt();
+        int m = sc.nextInt();
+        int add = sc.nextInt();
 
-        if(0 <= A && A <= 24 && 0 <= B && B <= 59) {
-            if(0 <= C && C <= 1000) {
-                while(B + C >= 60) {
-                    A++;
-                    C -= 60;
-                }
-                B += C;
-                if(A >= 24){
-                    A -= 24;
-                }
-                System.out.println(A+" "+B);
-            }
+        while(m + add >= 60){
+            h++;
+            m -= 60;
         }
+        m += add;
+        if(h >= 24){
+            h -= 24;
+        }
+        System.out.print(h+" "+m);
+        
     }
 }
